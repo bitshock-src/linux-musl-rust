@@ -1,0 +1,15 @@
+[target.x86_64-unknown-linux-musl]
+linker = "x86_64-linux-musl-gcc"
+rustflags = ["-C", "target-feature=+crt-static", "-C", "link-arg=-lstdc++"]
+
+[target.aarch64-unknown-linux-musl]
+linker = "aarch64-linux-musl-gcc"
+rustflags = ["-C", "target-feature=+crt-static", "-C", "link-arg=-lstdc++"]
+
+[env]
+CC_x86_64_unknown_linux_musl = "x86_64-linux-musl-gcc"
+CXX_x86_64_unknown_linux_musl = "x86_64-linux-musl-g++"
+AR_x86_64_unknown_linux_musl = "x86_64-linux-musl-ar"
+CC_aarch64_unknown_linux_musl = "aarch64-linux-musl-gcc"
+CXX_aarch64_unknown_linux_musl = "aarch64-linux-musl-g++"
+AR_aarch64_unknown_linux_musl = "aarch64-linux-musl-ar"
