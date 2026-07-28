@@ -4,7 +4,7 @@ FROM bitshock/x86_64-linux-musl:1.0.0 AS x86_64-musl
 
 FROM bitshock/aarch64-linux-musl:1.0.0 AS aarch64-musl
 
-FROM rust:1.91.1  AS base
+FROM rust:1.97.1 AS base
 
 RUN apt update && apt upgrade -y && apt install -y \
     build-essential \
